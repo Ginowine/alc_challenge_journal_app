@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">ALC Challenge Journal App</string>
+    <string name="desc_firebase_lockup">Firebase logo and name</string>
+    <string name="web_client_id">863093680746-m8bbsb6njivnlfko71t4geimabgvus1e.apps.googleusercontent.com</string>
+    <string name="log_error_occurred">"Error occurred: "</string>
+    <string name="loading">Loading…</string>
+
 </resources>

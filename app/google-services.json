@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "863093680746",
+    "firebase_url": "https://alc-challenge-journal-app.firebaseio.com",
+    "project_id": "alc-challenge-journal-app",
+    "storage_bucket": "alc-challenge-journal-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:863093680746:android:ea39d8017b6dc6cf",
+        "android_client_info": {
+          "package_name": "ingressive.tutorial.com.alcchallengejournalapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "863093680746-m8bbsb6njivnlfko71t4geimabgvus1e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrOEU0iVFlTSkxA90bFIc8lfL8cdb_WF8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
