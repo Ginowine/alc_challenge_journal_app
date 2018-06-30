@@ -4,5 +4,8 @@
     <string name="web_client_id">863093680746-m8bbsb6njivnlfko71t4geimabgvus1e.apps.googleusercontent.com</string>
     <string name="log_error_occurred">"Error occurred: "</string>
     <string name="loading">Loading…</string>
+    <string name="default_guest_name">[Guest name]</string>
+    <string name="title_activity_recycler_view">RecyclerView</string>
+    <string name="title_activity_journal">JournalActivity</string>
 
 </resources>
