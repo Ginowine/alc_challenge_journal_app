@@ -8,4 +8,7 @@
     <string name="title_activity_recycler_view">RecyclerView</string>
     <string name="title_activity_journal">JournalActivity</string>
 
+    <string name="jounal_title_hint">Journal title</string>
+    <string name="journal_note_hint">journal (max 110)</string>
+    <string name="add_button_text">ADD NEW JOURNAL</string>
 </resources>

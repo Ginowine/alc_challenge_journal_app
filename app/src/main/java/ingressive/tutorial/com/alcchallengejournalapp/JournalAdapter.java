@@ -7,16 +7,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.database.Cursor;
+
+import ingressive.tutorial.com.alcchallengejournalapp.data.JournalContract;
 
 public class JournalAdapter extends RecyclerView.Adapter<JournalAdapter.JournalViewHolder>{
 
     private Context mContext;
-    private int mCount;
+    private Cursor mCursor;
 
-    public JournalAdapter(Context context, int count) {
+    public JournalAdapter(Context context, Cursor cursor) {
         this.mContext = context;
-        // COMPLETED (10) Set the local mCount to be equal to count
-        mCount = count;
+        this.mCursor = cursor;
     }
 
     @NonNull
@@ -29,25 +31,41 @@ public class JournalAdapter extends RecyclerView.Adapter<JournalAdapter.JournalV
 
     @Override
     public void onBindViewHolder(@NonNull JournalViewHolder holder, int position) {
+        if (!mCursor.moveToPosition(position)){
+            String title = mCursor.getString(mCursor.getColumnIndex(JournalContract.JournalEntry.COLUMN_TITLE));
+            String notes = mCursor.getString(mCursor.getColumnIndex(JournalContract.JournalEntry.COLUMN_NOTE));
 
+            holder.noteTitle.setText(title);
+            holder.noteTextView.setText(notes);
+        }
+
+    }
+
+    public void swapCursor(Cursor newCursor) {
+        if (mCursor != null) mCursor.close();
+        mCursor = newCursor;
+        if (newCursor != null) {
+            // Force the RecyclerView to refresh
+            this.notifyDataSetChanged();
+        }
     }
 
     @Override
     public int getItemCount() {
-        return mCount;
+        return mCursor.getCount();
     }
 
     class JournalViewHolder extends RecyclerView.ViewHolder {
 
-        // Will display the guest name
-        TextView nameTextView;
-        // Will display the party size number
-        TextView partySizeTextView;
+        // Will display the note
+        TextView noteTextView;
+        // Will display the note title
+        TextView noteTitle;
 
         public JournalViewHolder(View itemView) {
             super(itemView);
-            nameTextView = (TextView) itemView.findViewById(R.id.title_text_view);
-            partySizeTextView = (TextView) itemView.findViewById(R.id.note_text_view);
+            noteTitle = (TextView) itemView.findViewById(R.id.title_text_view);
+            noteTextView = (TextView) itemView.findViewById(R.id.note_text_view);
         }
 
     }

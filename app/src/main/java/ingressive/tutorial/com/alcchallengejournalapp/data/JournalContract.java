@@ -8,7 +8,7 @@ public class JournalContract {
 
         public static final String TABLE_NAME = "journal";
         public static final String COLUMN_TITLE = "journalTitle";
-        public static final String COLUMN_ENTRY = "note";
+        public static final String COLUMN_NOTE = "note";
         public static final String COLUMN_TIMESTAMP = "timestamp";
     }
 }

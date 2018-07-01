@@ -15,7 +15,7 @@ import ingressive.tutorial.com.alcchallengejournalapp.data.JournalContract;
 import ingressive.tutorial.com.alcchallengejournalapp.data.JournalDbHelper;
 
 public class JournalActivity extends AppCompatActivity {
-    private JournalAdapter mAdapter;
+    public JournalAdapter mAdapter;
     private SQLiteDatabase mDb;
 
 
@@ -37,7 +37,7 @@ public class JournalActivity extends AppCompatActivity {
 
         Cursor cursor = getAllJournal();
 
-        mAdapter = new JournalAdapter(this, cursor.getCount());
+        mAdapter = new JournalAdapter(this, cursor);
 
         journallistRecyclerView.setAdapter(mAdapter);
 
@@ -54,7 +54,7 @@ public class JournalActivity extends AppCompatActivity {
     }
 
 
-    private Cursor getAllJournal() {
+    public Cursor getAllJournal() {
         // COMPLETED (6) Inside, call query on mDb passing in the table name and projection String [] order by COLUMN_TIMESTAMP
         return mDb.query(
                 JournalContract.JournalEntry.TABLE_NAME,
