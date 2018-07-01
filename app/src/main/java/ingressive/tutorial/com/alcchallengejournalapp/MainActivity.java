@@ -101,11 +101,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                             /* Go to next activity */
 
-//                            Intent intent = new Intent(MainActivity.this, HomeActivity.class);
-//                            intent.putExtras(bundle);
-//                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-//                            startActivity(intent);
-//                            finish();
+                            Intent intent = new Intent(MainActivity.this, JournalActivity.class);
+                            intent.putExtras(bundle);
+                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                            startActivity(intent);
+                            finish();
                         }
                     }
                 }

@@ -20,7 +20,7 @@ public class JournalDbHelper extends SQLiteOpenHelper {
         final String SQL_CREATE_WAITLIST_TABLE = "CREATE TABLE " + JournalContract.JournalEntry.TABLE_NAME + " (" +
                 JournalContract.JournalEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
                 JournalContract.JournalEntry.COLUMN_TITLE + " TEXT NOT NULL, " +
-                JournalContract.JournalEntry.COLUMN_ENTRY + " INTEGER NOT NULL, " +
+                JournalContract.JournalEntry.COLUMN_NOTE + " INTEGER NOT NULL, " +
                 JournalContract.JournalEntry.COLUMN_TIMESTAMP + " TIMESTAMP DEFAULT CURRENT_TIMESTAMP" +
                 "); ";
 

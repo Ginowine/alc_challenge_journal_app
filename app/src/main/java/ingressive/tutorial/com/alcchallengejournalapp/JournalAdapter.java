@@ -57,9 +57,8 @@ public class JournalAdapter extends RecyclerView.Adapter<JournalAdapter.JournalV
 
     class JournalViewHolder extends RecyclerView.ViewHolder {
 
-        // Will display the note
         TextView noteTextView;
-        // Will display the note title
+
         TextView noteTitle;
 
         public JournalViewHolder(View itemView) {
