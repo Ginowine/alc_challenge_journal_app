@@ -21,6 +21,7 @@ public class JournalAdapter extends RecyclerView.Adapter<JournalAdapter.JournalV
         this.mCursor = cursor;
     }
 
+
     @NonNull
     @Override
     public JournalViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -32,13 +33,13 @@ public class JournalAdapter extends RecyclerView.Adapter<JournalAdapter.JournalV
     @Override
     public void onBindViewHolder(@NonNull JournalViewHolder holder, int position) {
         if (!mCursor.moveToPosition(position)){
+            return;
+        }
             String title = mCursor.getString(mCursor.getColumnIndex(JournalContract.JournalEntry.COLUMN_TITLE));
             String notes = mCursor.getString(mCursor.getColumnIndex(JournalContract.JournalEntry.COLUMN_NOTE));
 
             holder.noteTitle.setText(title);
             holder.noteTextView.setText(notes);
-        }
-
     }
 
     public void swapCursor(Cursor newCursor) {

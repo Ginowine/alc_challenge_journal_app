@@ -10,26 +10,25 @@
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:orientation="vertical"
         android:layout_height="wrap_content">
 
         <EditText
             android:id="@+id/jounal_title_edit_text"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-
             android:hint="@string/jounal_title_hint"
             android:inputType="textPersonName|textCapWords"
             android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
 
         <EditText
             android:id="@+id/journal_edit_text"
-            android:layout_width="40dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="@string/journal_note_hint"
             android:contentDescription="@string/journal_note_hint"
             android:gravity="center"
-            android:inputType="number"
-            android:maxLength="2"
             android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
 
 

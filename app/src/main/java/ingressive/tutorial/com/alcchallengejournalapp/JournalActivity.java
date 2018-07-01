@@ -34,7 +34,7 @@ public class JournalActivity extends AppCompatActivity {
         journallistRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         JournalDbHelper dbHelper = new JournalDbHelper(this);
-        mDb = dbHelper.getWritableDatabase();
+        mDb = dbHelper.getReadableDatabase();
 
         Cursor cursor = getAllJournal();
 
